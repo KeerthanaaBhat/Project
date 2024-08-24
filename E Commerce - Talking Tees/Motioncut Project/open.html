@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talking Tees</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@500&family=Mukta:wght@400;500&family=Poppins:wght@200;300;400&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="header">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./logo/logo.png" alt="logo">
+                    <span class="tees">TALKING TEES</span>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li>
+                            <a  href="./index.html">Home</a>
+                        </li>
+                        <li>
+                            <a  href="./col.html">Collection</a>
+                        </li>
+                        <li>
+                            <a  href="./about.html">About </a>
+                        </li>
+                        <li>
+                            <a  href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="button">
+                    <a href="./cart.html"><i class=" fa fa-shopping-cart"></i> </a>
+                    
+                </div>
+                <img src="./logo/menu.png" class="menu-icon" onclick="menutoggle()">
+             </div>
+    </div>
+
+
+
+
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="" alt="" width="100%" id="ProductImg" data-product-image="">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="./images/1.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/3.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/35.jpeg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="./images/2.jpg" width="100%" class="small-img">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p> Home /Talking Tees</p>
+                <h1>Oversized Tee</h1>
+                <h4>Rs 699</h4>
+                <select>
+                    <option>Select Size</option>
+                    <option >S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select><br>
+                <input type="number" id="productQuantity" value="document.getElementById('productQuantity').value;">
+                <a href="javascript:void(0)" class="btn" onclick="addToCart('1', 'Oversized Tee', 699, document.getElementById('productQuantity').value)">Add To Cart</a>
+
+
+
+                <h3>Product Description:<i class="fa fa-indent"></i></h3>
+               
+                <p>Elevate your casual style with our Oversized Tees, the perfect blend of comfort and fashion. These tees are designed to provide you with a relaxed, on-trend look that's both versatile and effortlessly cool. </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="small-container">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-3">
+                <a href="./col.html"><img src="./images/3.jpg" alt="photo"></a>
+                <span>Talking Tees</span>
+                <h4>Oversized Tees</h4>
+                <div class="star">
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star-half"></i>
+                </div>
+                <p>Rs 699</p>
+            </div>
+
+            <div class="col-3">
+                <a href="./col2.html"><img src="./images/10.jpg" alt="photo"></a>
+                <span>Talking Tees</span>
+                <h4>Shoulder Dropdown</h4>
+                <div class="star">
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star"></i>
+                </div>
+                <p>Rs 599</p>
+            </div>
+
+            <div class="col-3">
+                <a href="./col1.html"><img src="./images/20.jpg" alt="photo"></a>
+                <span>Talking Tees</span>
+                <h4>Sweatshirts</h4>
+                <div class="star">
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star"></i>
+                    <i class=" fas fa-star-half-alt"></i>
+                </div>
+                <p>Rs 899</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="./logo/playstore.png">
+                        <img src="./logo/app store.png" style="height: 40px;">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h3 style="font-family: 'Kaisei HarunoUmi', serif;">TALKING TEES</h3>
+                    <p>Our purpose is to Sustainably make the pleasure and benefits of sports accessible to the many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3><pre>  Useful Links</pre></h3>
+                    <ul>
+                        <li><h5 style="color: #050505;font-weight:500; ">Coupons</h5></li>
+                        <li><h5 style="color: #050505;font-weight:500">Blog Post</h5></li>
+                        <li><h5 style="color: #050505;font-weight:500">Return Policy</h5></li>
+                        <li><h5 style="color: #050505;font-weight:500">Join Affiliate</li></h5>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3><pre>   Follow us</pre></h3>
+                        <ul>
+                            <li><h5 style="color: #050505;font-weight:500">Facebook</li></h5>
+                            <li><h5 style="color: #050505;font-weight:500">Twitter</li></h5>
+                            <li><h5 style="color: #050505;font-weight:500">Instagram</li></h5>
+                            <li><h5 style="color: #050505;font-weight:500">Youtube</li></h5>
+                        </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright @ 2023</p>
+        </div>
+     </div>
+     
+
+
+
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+     </script>
+
+     
+
+     <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.querySelectorAll(".small-img");
+    
+        for (var i = 0; i < SmallImg.length; i++) {
+            SmallImg[i].onclick = function() {
+                ProductImg.src = this.src;
+            }
+        }
+    </script>
+    <script>
+        function addToCart(productId, productName, productPrice) {
+            var productImage = document.getElementById('ProductImg').getAttribute('data-product-image');
+            
+            var productQuantity = document.getElementById('productQuantity').value;
+            
+            var product = {
+                image: productImage,
+                name: productName,
+                price: productPrice,
+                quantity: productQuantity,
+            };
+            
+            var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push(product);
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+        
+    </script>
+
+    <script>
+        // Get product details from the URL and set them on the page
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("productId");
+        const productName = urlParams.get("productName");
+        const productPrice = urlParams.get("productPrice");
+        const productImage = urlParams.get("productImage");
+        
+        document.getElementById("ProductImg").src = productImage;
+        document.getElementById("ProductImg").setAttribute("data-product-image", productImage);
+        document.getElementById("productName").textContent = productName;
+        document.getElementById("productPrice").textContent = `Rs ${productPrice}`;
+        
+        // The rest of your JavaScript code remains the same
+    </script>
+
+    
+    
+
+</body>
+</html>

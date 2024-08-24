@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talking Tees</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@500&family=Mukta:wght@400;500&family=Poppins:wght@200;300;400&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="header">
+        
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./logo/logo.png" alt="logo">
+                    <span class="tees">TALKING TEES</span>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li>
+                            <a  href="./index.html">Home</a>
+                        </li>
+                        <li>
+                            <a  href="./col.html">Collection</a>
+                        </li>
+                        <li>
+                            <a class="active" href="./about.html">About </a>
+                        </li>
+                        <li>
+                            <a  href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="button">
+                    <a href="./cart.html"><i class=" fa fa-shopping-cart"></i> </a>
+                    
+                </div>
+                <img src="./logo/menu.png" class="menu-icon" onclick="menutoggle()">
+             </div>
+    </div>
+
+
+    <div class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>Welcome to Talking Tees, where fashion meets comfort! Our journey began with a simple yet powerful idea - to create clothing that allows you to express yourself while staying comfortable. We believe that what you wear is an extension of your identity, and it should empower you in every way. With a passion for design and a commitment to quality, we've been providing you with the finest collection of tees, sweatshirts, and more.</p>
+                <p>At Talking Tees, we strive to blend style and substance. Our clothing is not just about looking good; it's about feeling good too. From our trendsetting designs to the choice of materials, we're dedicated to delivering a unique experience every time you wear our products.</p>
+            </div>
+            <div class="mission-vision">
+                <h2>Our Mission</h2>
+                <p>Our mission is to make fashion accessible and enjoyable for everyone. We aim to provide affordable clothing that reflects the latest trends and timeless styles, all while ensuring comfort and quality.</p>
+                <h2>Our Vision</h2>
+                <p>Our vision is to be your go-to destination for trendy and comfortable clothing. We're committed to sustainability and making a positive impact on our community and the environment through our products and practices.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="./logo/playstore.png">
+                        <img src="./logo/app store.png " style="height: 40px;">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h3 style="font-family: 'Kaisei HarunoUmi', serif;">TALKING TEES</h3>
+                    <p>Our purpose is to Sustainably make the pleasure and benefits of sports accessible to the many.</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3><pre>  Useful Links</pre></h3>
+                    <ul>
+                        <li><h5 style="color: #050505;font-weight:500; ">Coupons</h5></li>
+                        <li><h5 style="color: #050505;font-weight:500">Blog Post</h5></li>
+                        <li><h5 style="color: #050505;font-weight:500">Return Policy</h5></li>
+                        <li><h5 style="color: #050505;font-weight:500">Join Affiliate</li></h5>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                        <h3><pre>   Follow us</pre></h3>
+                        <ul>
+                            <li><h5 style="color: #050505;font-weight:500">Facebook</li></h5>
+                            <li><h5 style="color: #050505;font-weight:500">Twitter</li></h5>
+                            <li><h5 style="color: #050505;font-weight:500">Instagram</li></h5>
+                            <li><h5 style="color: #050505;font-weight:500">Youtube</li></h5>
+                        </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright @ 2023</p>
+        </div>
+     </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+     </script>
+
+     </body>
+     </html>

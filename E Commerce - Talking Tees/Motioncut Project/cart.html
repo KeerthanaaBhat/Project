@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talking Tees</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@500&family=Mukta:wght@400;500&family=Poppins:wght@200;300;400&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="header">
+        
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./logo/logo.png" alt="logo">
+                    <span class="tees">TALKING TEES</span>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li>
+                            <a  href="./index.html">Home</a>
+                        </li>
+                        <li>
+                            <a  href="./col.html">Collection</a>
+                        </li>
+                        <li>
+                            <a  href="./about.html">About</a>
+                        </li>
+                        <li>
+                            <a  href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="button">
+                    <a href="./cart.html"><i class=" fa fa-shopping-cart"></i> </a>
+                    
+                </div>
+                <img src="./logo/menu.png" class="menu-icon" onclick="menutoggle()">
+             </div>
+    </div>
+
+
+    <section id="cart" class="section-p1">
+        <table style="width: 100%;">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be added here via JavaScript -->
+            </tbody>
+    
+            <tfoot>
+                <tr>
+                    <td colspan="5" style="font-size: 22px; text-align:end">Total:</td>
+                    <td id="total-price">$0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+
+
+
+
+
+
+
+
+
+             <div class="footer" style="margin-top: 500px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col-1">
+                            <h3>Download Our App</h3>
+                            <p>Download App for Android and ios mobile phone</p>
+                            <div class="app-logo">
+                                <img src="./logo/playstore.png">
+                                <img src="./logo/app store.png " style="height: 40px;">
+                            </div>
+                        </div>
+                        <div class="footer-col-2">
+                            <h3 style="font-family: 'Kaisei HarunoUmi', serif;">TALKING TEES</h3>
+                            <p>Our purpose is to Sustainably make the pleasure and benefits of sports accessible to the many.</p>
+                        </div>
+                        <div class="footer-col-3">
+                            <h3>Useful Links</h3>
+                            <ul>
+                                <li><h5 style="color: #050505;font-weight:500; ">Coupons</h5></li>
+                                <li><h5 style="color: #050505;font-weight:500">Blog Post</h5></li>
+                                <li><h5 style="color: #050505;font-weight:500">Return Policy</h5></li>
+                                <li><h5 style="color: #050505;font-weight:500">Join Affiliate</li></h5>
+                            </ul>
+                        </div>
+                        <div class="footer-col-4">
+                                <h3>Follow us</h3>
+                                <ul>
+                                    <li><h5 style="color: #050505;font-weight:500">Facebook</li></h5>
+                                    <li><h5 style="color: #050505;font-weight:500">Twitter</li></h5>
+                                    <li><h5 style="color: #050505;font-weight:500">Instagram</li></h5>
+                                    <li><h5 style="color: #050505;font-weight:500">Youtube</li></h5>
+                                </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="copyright">Copyright @ 2023</p>
+                </div>
+             </div>
+
+
+
+             <script>
+                var MenuItems = document.getElementById("MenuItems");
+        
+                MenuItems.style.maxHeight = "0px";
+        
+                function menutoggle(){
+                    if(MenuItems.style.maxHeight == "0px")
+                    {
+                        MenuItems.style.maxHeight = "200px";
+                    }
+                    else
+                    {
+                        MenuItems.style.maxHeight = "0px"
+                    }
+                }
+             </script>
+             <script>
+                // Retrieve cart items from localStorage
+                var cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+                // Function to display cart items
+                function displayCart() {
+                    var cartItems = document.getElementById('cart-items');
+                    cartItems.innerHTML = ''; // Clear the cart items before displaying
+                
+                    cart.forEach(function (item) {
+                        var itemRow = document.createElement('tr');
+                        itemRow.innerHTML = `
+                        <td><a href="#" onclick="removeFromCart(${cart.indexOf(item)})"><i class="far fa-times-circle"></i></a></td>
+                        <td><img src="${item.image}" alt="${item.name}"></td>
+                        <td>${item.name}</td>
+                        <td>Rs ${item.price}</td>
+                        <td><input type="number" value="${item.quantity}" onchange="updateQuantity('${item.id}', this.value)"></td>
+                        <td>Rs ${item.price * item.quantity}</td>
+                        `;
+                        cartItems.appendChild(itemRow);
+                    });
+            
+                    // Update the total price
+                    updateTotalPrice();
+                }
+            
+                // Function to remove an item from the cart
+                function removeFromCart(index) {
+                    cart.splice(index, 1);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    location.reload(); // Refresh the page to reflect changes
+                }
+            
+                // Function to update the quantity of an item
+                function updateQuantity(index, input) {
+                    cart[index].quantity = parseInt(input.value, 10);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    displayCart();
+                }
+                
+                // Function to update the total price
+                function updateTotalPrice() {
+                    var totalPrice = cart.reduce(function (total, item) {
+                        return total + item.price * item.quantity;
+                    }, 0);
+                    document.getElementById('total-price').innerText = `$${totalPrice.toFixed(2)}`;
+                }
+            
+                displayCart();
+            </script>
+            
+            
+
+           
+             
+
+             </body>
+             </html>
