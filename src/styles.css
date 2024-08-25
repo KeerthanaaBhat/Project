@@ -1,0 +1,451 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #000000, #474a5c);
+    color: white;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+.sidebar {
+    width: 15%;
+    background-color: #000000;
+    color: white;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: rgb(254, 254, 254);
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    color: #909091;
+}
+
+.line-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15%; /* Same as sidebar width */
+    width: 1px;
+    background-color: #bab8b8;
+    z-index: 100; /* Ensure it's above content */
+}
+
+.content {
+    margin-left: 15%;
+    padding-left: 1px;
+    width: 85%;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: none;
+    color: white;
+    text-align: center;
+    line-height: 0px;
+}
+
+#home h1 {
+    font-size: 3em;
+}
+
+#home p {
+    font-size: 1.5em;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #8b8d96;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 20px 20px;
+    background-color: #474a5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #fbfbfb;
+    color: #000000;
+}
+
+.separator {
+    width: 80%;
+    height: 1px;
+    background-color: #9b9b9c;
+}
+
+#about {
+    padding: 0;
+    margin: 0;
+}
+
+.sub-navbar {
+    overflow: hidden;
+}
+
+.sub-navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-navbar ul li {
+    padding: 14px 0.5px;
+}
+
+.sub-navbar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.sub-navbar ul li a:hover {
+    color: #8b8d96;
+}
+
+.sub-navbar ul li.partition {
+    width: 2px;
+    height: 30px;
+    background-color: #474a5c;
+    margin: 0 10px;
+}
+
+#about h2 {
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.about-content {
+    display: none;
+    padding: 20px;
+}
+
+.about-content.active {
+    display: block;
+}
+
+.objective-content {
+    background-color: #393c49;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.objective-content h2 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.objective-content p {
+    color: #8b8d96;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #8b8d96;
+}
+
+.contact-info  a {
+    text-decoration: none;
+    color: #8b8d96;
+}
+
+.education-content {
+    background-color: #393c49;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.education-content h3 {
+    color: white;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.institution {
+    margin-bottom: 15px;
+}
+
+.institution strong {
+    color: white;
+    font-weight: bold;
+}
+
+.institution span {
+    color: #8b8d96;
+    font-size: 0.9em;
+}
+
+.course p {
+    color: #8b8d96;
+    font-size: 1em;
+    line-height: 0.5;
+}
+
+
+
+
+
+#skills {
+    padding: 20px;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill-item {
+    margin: 20px;
+    text-align: center;
+}
+
+.skill-item i {
+    font-size: 3em;
+    color: #85a7e6;
+}
+
+.skill-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+
+#internships {
+    padding: 20px;
+    text-align: center;
+}
+
+.internship-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.internship-details {
+    flex: 1;
+    text-align: left;
+}
+
+.internship-details h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #474a5c;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.github img {
+    max-height: 200px;
+    max-width: 400px;
+    margin-right: 10px;
+}
+.certificate img {
+    max-height: 200px;
+    max-width: 100%;
+}
+
+.certificate-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: white;
+}
+
+.certificate-link p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+
+#projects {
+    padding: 20px;
+    
+    color: white; /* Text color against new background */
+    border-radius: 10px;
+    
+    margin-bottom: 20px;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between; /* Ensures even spacing between projects */
+}
+
+.project {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(5, 5, 5); /* Background color for each project box */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.project:first-child {
+    margin-right: 20px; /* Space between the first and second projects */
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+.project-info {
+    margin-top: 10px;
+}
+
+.project-info h3 {
+    color: #bababa; /* Adjust project title color */
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #8f8f90; /* Adjust project description color */
+    font-size: 0.9em;
+}
+
+
+#certificates {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#certificates h2 {
+    font-size: 2.5em; /* Larger font size for emphasis */
+    color: #ffffff; /* Dark text color */
+    margin-bottom: 30px;
+}
+
+.image {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */  
+}
+
+.certificate {  
+    flex: 0 0 auto; 
+    margin: 0 10px; /* Space between certificates */
+}
+
+.certificate img {
+    max-width: 100%;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Footer styles */
+.footer {
+    background: linear-gradient(to right, #000000, #474a5c);
+    color: white; /* White text */
+    text-align: center; /* Centered text */
+    padding: 20px 0; /* Padding at top and bottom */
+    
+    width: 100%; /* Full width */
+    bottom: 0; /* Position at the bottom */
+}
+
+.footer-content {
+    margin-bottom: 10px; /* Margin below the content */
+}
+
+.footer-content p {
+    margin: 5px 0; /* Margin between paragraphs */
+    font-size: 14px; /* Font size */
+}
+
+.footer-bottom p {
+    margin: 5px 0; /* Margin between paragraphs */
+    font-size: 12px; /* Smaller font size */
+}
+
